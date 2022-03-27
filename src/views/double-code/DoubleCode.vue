@@ -28,10 +28,10 @@
     <el-table-column label="状态" width="120">
       <template #default="scope">
         <el-icon :size="14" v-show="scope.row.state === 0">
-          <semi-select />
+          <SemiSelect />
         </el-icon>
         <el-icon :size="18" v-show="scope.row.state === 1" class="is-loading">
-          <loading />
+          <Loading />
         </el-icon>
         <el-icon :size="20" v-show="scope.row.state === 2" color="#67C23A">
           <Check />

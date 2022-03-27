@@ -135,6 +135,7 @@ const useCode = () => {
       }
     }
     loading.value = false
+    dialog.message('下载成功');
   }
 
   /**
@@ -146,14 +147,13 @@ const useCode = () => {
   const downloadPic = async (url: string, name: string, index: number) => {
     const suffix = url.split('.')[url.split('.').length - 1];
     const path = `${downloadDir.value}${name}.${suffix}`
-    console.log(index, url);
 
     try {
       const res = await http.fetch(url, { method: 'GET', responseType: ResponseType.Binary });
       if (tableData.value[index].state != -1 && tableData.value[index].state == 1) {
         tableData.value[index].state = 2;
       }
-      writeBinaryFile({ contents: res.data as any, path: path })
+      await writeBinaryFile({ contents: res.data as any, path: path })
     } catch {
       tableData.value[index].state = -1;
       downloadErrors.value.push(`${index + 1}行 ${name}下载失败`)
