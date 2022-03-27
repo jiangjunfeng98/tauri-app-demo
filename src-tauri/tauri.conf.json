@@ -1,6 +1,6 @@
 {
   "package": {
-    "productName": "Assistant-tool-app",
+    "productName": "双码下载助手",
     "version": "0.1.0"
   },
   "build": {
@@ -43,13 +43,17 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "wix": {
+          "skipWebviewInstall": true
+        }
       }
     },
     "updater": {
       "active": false
     },
     "allowlist": {
+      "all": false,
       "path": {
         "all": true
       },
