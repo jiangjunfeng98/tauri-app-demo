@@ -1,8 +1,8 @@
 [package]
 name = "app"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "健康码、行程码下载"
+authors = ["几个霜"]
 license = ""
 repository = ""
 default-run = "app"

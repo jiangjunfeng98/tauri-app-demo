@@ -45,7 +45,8 @@
         "digestAlgorithm": "sha256",
         "timestampUrl": "",
         "wix": {
-          "skipWebviewInstall": true
+          "skipWebviewInstall": false,
+          "language": "zh-CN"
         }
       }
     },
